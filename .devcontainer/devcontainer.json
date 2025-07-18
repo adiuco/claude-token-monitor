@@ -4,7 +4,8 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/base:debian",
 "runArgs": [
-  "--privileged"
+  "--privileged",
+    "–v", "/var/run/docker.sock:/var/run/docker.sock"
 ],
 "remoteUser": "vscode",
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -12,7 +13,6 @@
 
  "features": {
 	"ghcr.io/devcontainers/features/rust:1": {},
-	"ghcr.io/devcontainers/features/docker-in-docker:2": {},
     	"ghcr.io/devcontainers/features/node:1": {},
     	"ghcr.io/devcontainers/features/python:1": {}
   },
