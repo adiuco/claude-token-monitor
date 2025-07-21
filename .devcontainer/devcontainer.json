@@ -29,7 +29,8 @@
       "enableNonRootDocker": "true"
     },
     // Adds Node.js and npm/yarn for JavaScript development.
-    "ghcr.io/devcontainers/features/node:1": {},
+    // removing node to validate better installation
+    //"ghcr.io/devcontainers/features/node:1": {},
     // Adds Python and its package management tools (pip).
     "ghcr.io/devcontainers/features/python:1": {}
   },
@@ -76,7 +77,10 @@
   // Here, it updates npm, installs Node.js project dependencies with yarn, and
   // fetches Rust project dependencies with cargo.
   // Reference: https://containers.dev/implementors/json_reference/#lifecycle-scripts
-  "postCreateCommand": "npm install -g npm@latest && yarn install && cargo fetch",
+ 
+ //TODO: fix bin/00-bootstrap.sh "postCreateCommand": "npm install -g npm@latest && yarn install && cargo fetch",
+
+//   "postCreateCommand": "npm install -g npm@latest && yarn install && cargo fetch",
 
   // "workspaceFolder": Defines the path inside the container where your project files
   // will be mounted. This is the directory that VS Code (or your IDE) will open by default.
