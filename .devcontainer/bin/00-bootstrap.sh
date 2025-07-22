@@ -114,3 +114,5 @@ logit " https://github.com/settings/personal-access-tokens"
 logit ""
 logit 'To add the token, gh auth login -> choose github.com ->choose ssh -> generate new ssh key (select no) -> Paste your token '
 
+logit "now do ${SCRIPT_DIR}/01-setup-agentics-base.sh to install the base agentics tools (it may take a few minutes to install the first time)"
+logit "and then ${SCRIPT_DIR}/02-reg-mcp.sh to register the Model Context Protocols (MCPs) with Claude CLI"
