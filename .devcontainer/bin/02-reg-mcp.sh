@@ -1,7 +1,4 @@
 #!/bin/bash
-# This script is used to bootstrap the development container environment.
-set -e
-
 cd "$(dirname "$0")"  
 # capture the SCRIPT_DIR for anchoring invocation
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -14,5 +11,8 @@ fi
 # source the common logging script
 source "$SCRIPT_DIR/00-a-common.sh"
 
-logit "installing claude-flow CLI"
-npm install -g -y claude-flow@alpha init --force
+logit "adding MCPs to Claude CLI"
+
+claude mcp add  github -- npx -y "@modelcontextprotocol/server-github"
+claude mcp add playwright -- npx "@playwright/mcp@latest"
+claude mcp add context7 -- npx -y "@upstash/context7-mcp@latest"

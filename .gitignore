@@ -150,5 +150,5 @@ coordination/
 claude-flow*
 CLAUDE.md 
 rust-client/
-
+.devcontainer/bin/installation.log
 
