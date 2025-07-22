@@ -149,4 +149,6 @@ memory/
 coordination/
 claude-flow*
 CLAUDE.md 
+rust-client/
+
 
